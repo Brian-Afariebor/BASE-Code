@@ -13,6 +13,7 @@ It:
   - Doesn't come with lists
   - Doesn't have classes
   - Uses Go commands to control the command flow
-  - Doesn't check for syntax errors untill it has to run that section, and adds filler content to make the function still work
+  - Doesn't check for syntax errors untill it has to run that section, and adds filler content to make the code still work
   - Uses Polish Notation to know what commands to run before getting data for it
   - Doesn't use tabs as syntax
+
