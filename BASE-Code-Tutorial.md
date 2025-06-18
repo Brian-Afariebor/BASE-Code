@@ -20,7 +20,7 @@ Exs: item x set 1 >>> x = 1; item x input set 1 >>> x[input] = 1
 
 # Defining Points 
 
-In BASE-Code, functions are run by going to a point, and then comming back, sinilar to ASM. To set a point to goto, use the keyword "point", and then type the number to set the point.
+In BASE-Code, functions are run by going to a point, and then comming back, similar to ASM. To set a point to goto, use the keyword "point", and then type the number to set the point.
 
 Ex: point 1 CODE >>> Point[1] = CODE
 
