@@ -8,7 +8,7 @@ Exs. print Hello World! \ end >>> print("Hello World!"); print \ n \ end >>> pri
 
 # Getting User Input 
 
-To get the user's input, use the keyword "item".
+To get the user's input, use the keyword "inpu".
 
 Exs. print input \ end >>> print(input(" "))
 
