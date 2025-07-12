@@ -2,15 +2,11 @@
 
 # Printing Items 
 
-To print a line, type the keyword "print", followed the line. If you would like to print the result of a fuction, type a  backslash (\), followed by the function.
+To print a line, type the keyword "print", followed the line.
 
-Examples)
+Example)
 
 print Hello World! \ end >>> print("Hello World!")
-
-print \ n \ end >>> print(" ") 
-
-print Good! \ go 1 >>> print("Good!"), function_at_1()
 
 # Getting User Input 
 
@@ -18,27 +14,38 @@ To get the user's input, use the keyword "input".
 
 Example) 
 
-print input \ end >>> print(input(" "))
+print \ input \ end >>> print(input(" "))
+
+# Running Functions in another Function
+
+In some cases, running a function in another function is neccassary to keep things going smoothly.
 
 # Defining Items 
 
-To define an item, use the "item" keyword, follwed by "set" for the value.
+To define an item, use the "item" keyword, follwed by "\ set" for the value.
 
 Examples ) 
 
-item x set 1 >>> x = 1
+item x \ set 1 >>> x = 1
 
-item x input set 1 >>> x[input] = 1
+item x \ input \ set 1 >>> x[input] = 1
 
-# Defining Points 
+# Defining Locations
 
-In BASE-Code, functions are run by going to a point, and then comming back, similar to ASM. To set a point to goto, use the keyword "point", and then type the number to set the point.
+In BASE-Code, there are 2 types of Locations: Points, written using "point", and Constants, written using "const". Points are always run if the program gets to them, and Constants are only run if they are called. However, if they reference another Constant or Point, said Constant or Point should have already been defined by the program.
+As a result, Constants are used to effectively make functions, and Points for simple loops and conditionals.
 
 Example )
 
-point 1 CODE >>> Point[1] = CODE
+... 
+point 1 >>> locations[points][1] = CODE1
+CODE1
+...
+const 1>>> locations[constants] = CODE2
+CODE2
+...
 
-# Going to a Point 
+# Going to a location 
 
 To go to a point, use the "go" keyword, and then type the Point name. To go to a specific word, add the keyword "word", and then type the word number(the first word is word 0). To go to the top of the Go Stack, add the "top" keyword.
 
