@@ -22,7 +22,7 @@ In some cases, running a function in another function is neccassary to keep thin
 
 \ n (or \ null) : writes a null valued string (think of it as a space) to the Data Stack
 
-\ \ : writes the backslash "\" to the Data Stack
+\ \ : writes the backslash "\ " to the Data Stack
 
 \ then : ends the current function and runs the next one (think of it like a semicolon, ";")
 
