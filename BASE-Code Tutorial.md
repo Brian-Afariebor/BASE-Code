@@ -38,31 +38,37 @@ As a result, Constants are used to effectively make functions, and Points for si
 Example )
 
 ... 
+
 point 1 >>> locations[points][1] = CODE1
+
 CODE1
+
 ...
-const 1>>> locations[constants] = CODE2
+
+...
+
+const 2 >>> locations[constants][2] = CODE2
+
 CODE2
+
 ...
 
 # Going to a location 
 
-To go to a point, use the "go" keyword, and then type the Point name. To go to a specific word, add the keyword "word", and then type the word number(the first word is word 0). To go to the top of the Go Stack, add the "top" keyword.
+To go to a point or constant, use the "goto" keyword, and then type Point or Constant, followed by it's name. To go to the top of the Go Stack, add the "last" keyword.
 
 Examples )
 
-go 1 >>> Pointer = Point[1]
+go point 1 >>> Pointer = Point[1]
 
-go word 1 >>> Pointer = 1
-
-go top >>> Pointer = go.add(Point[Points[Length]]-1)
+goto last >>> Pointer = goto.add(Point[Points[Length]]-1)
 
 # Adding a defined Point to the Go Stack 
 
-To add a point to the Go Stack, add the "add" keyword, and then type the Point name. To add a specific word, add the keyword "word", and then type the word number(the first word is 0).
+To add a point to the Go Stack, add the "add" keyword, and then type the Point or Constant name. If you would like to save the current place, type "current".
 
 Examples ) 
 
-add 1 >>> go.append(point[1]) 
+add 1 >>> goto.append(locations[point][1]) 
 
-add word 1 >>> go.append(1)
+add current >>> goto.append(pointer)
