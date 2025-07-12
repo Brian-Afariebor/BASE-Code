@@ -82,22 +82,24 @@ CODE2
 
 # Going to a location 
 
-To go to a point or constant, use the "goto" keyword, and then type Point or Constant, followed by it's name. To go to the top of the Go Stack, add the "last" keyword.
+To go to a point or constant, use the "goto" keyword, and then type Point or Constant, followed by it's name. To go to the top of the Go Stack, add the "last" keyword. You cannot go to a place that hasn't been defined yet, unless you add the keyword "general" to the name. The code will then go to the first point it finds, from the top, that has that name. If it doesn't find it, it will stop the program. Note that using "general" will cause a significant delay in the execution of the destination.
 
 Examples )
 
 goto point 1 >>> Pointer = locations[point][1]
 
-goto const 2 >>> Point = locations[constant][1]
+goto const 2 >>> Pointer = locations[constant][1]
 
 goto last >>> Pointer = Pointer = locations[locations0]]
 
+goto global point 1 >>> repeat untill locations[current] = 1 : Pointer ++; then: locations[point][1] = locations[current]
+
 # Adding a defined Point to the Go Stack 
 
-To add a point to the Go Stack, add the "add" keyword, and then type the Point or Constant name. If you would like to save the current place, type "current".
+To add a point to the Go Stack, add the "add" keyword, and then type the Point or Constant name. If you would like to save the current point or constant, type "current".
 
 Examples ) 
 
 add 1 >>> goto.append(locations[point][1]) 
 
-add current >>> goto.append(pointer)
+add current >>> goto.append(locations[current])
